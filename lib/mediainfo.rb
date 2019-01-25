@@ -42,11 +42,7 @@ module MediaInfo
   def self.run(input = nil)
     raise ArgumentError, 'Your input cannot be blank.' if input.nil?
     command = "#{location} #{input} --Output=XML 2>&1"
-    raw_response = `#{command}`
-    unless $? == 0
-      raise ExecutionError, "Execution of '#{command}' failed. #{raw_response.inspect}"
-    end
-    return raw_response
+    return IO.popen(command).read
   end
 
   def self.from(input)
@@ -57,7 +53,7 @@ module MediaInfo
 
   def self.from_string(input)
     return from_xml(input) if input.include?('<?xml')
-    return from_link(input) if input =~ URI::regexp
+    return from_link(input) if input =~ URI::regexp('http') # match only http URI schemes
 
     # If nothing else matches, treat as a local file
     # User can validate whether or not has audio or video
