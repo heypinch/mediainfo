@@ -12,10 +12,7 @@ For audio or video files, you can check for the presence of an `audio` or `video
 #<MediaInfo::Tracks:0x007fcc5908a688 @xml="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<MediaInfo\n    xmlns=\"https://mediaarea.net/mediainfo\"\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n    xsi:schemaLocation=\"https://mediaarea.net/mediainfo https://mediaarea.net/mediainfo/mediainfo_2_0.xsd\"\n    version=\"2.0\">\n<creatingLibrary version=\"18.08.1\" url=\"https://mediaarea.net/MediaInfo\">MediaInfoLib</creatingLibrary>\n<media ref=\"prices.txt\">\n<track type=\"General\">\n<FileExtension>txt</FileExtension>\n<FileSize>542</FileSize>\n<StreamSize>542</StreamSize>\n<File_Modified_Date>UTC 2018-12-19 00:19:50</File_Modified_Date>\n<File_Modified_Date_Local>2018-12-19 10:19:50</File_Modified_Date_Local>\n</track>\n</media>\n</MediaInfo>\n\n", @track_types=["general"], @attribute_standardization_rules={"Bit_rate"=>"Bitrate", "Bitrate_mode"=>"Bitrate_mode", "Bit_rate_mode"=>"Bitrate_mode", "Overallbitrate"=>"Overall_bitrate", "Overall_bit_rate"=>"Overall_bitrate", "File_size"=>"Filesize", "Stream_size"=>"Streamsize", "Frame_rate"=>"Framerate", "Frame_rate_mode"=>"Framerate_mode", "Maximum_frame_rate"=>"Maximum_framerate", "Displayaspectratio"=>"Display_aspect_ratio", "Pixelaspectratio"=>"Pixel_aspect_ratio"}, @general=#<MediaInfo::Tracks::Attributes:0x007fcc562aa4e8 @filesize=542, @file_modified_date=2018-12-19 00:19:50 +1000, @file_modified_date_local=2018-12-19 10:19:50 +1000, @count=1, @fileextension="txt", @streamsize=542>>
 ```
 
-
-
-
-
+<hr>
 
 # MediaInfo [![Build Status](https://travis-ci.org/greatseth/mediainfo.svg?branch=master)](https://travis-ci.org/greatseth/mediainfo)
 
