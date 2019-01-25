@@ -58,8 +58,11 @@ module MediaInfo
   def self.from_string(input)
     return from_xml(input) if input.include?('<?xml')
     return from_link(input) if input =~ URI::regexp
-    return from_local_file(input) if input.match(/[^\\]*\.\w+$/)
-    raise BadInputError
+
+    # If nothing else matches, treat as a local file
+    # User can validate whether or not has audio or video
+    # with media_info_obj.audio or media_info_obj.video
+    return from_local_file(input)
   end
 
   def self.from_xml(input)
